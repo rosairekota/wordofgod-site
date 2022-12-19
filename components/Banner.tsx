@@ -7,13 +7,13 @@ interface Props {}
 
 export const Banner = (props: Props) => {
   return (
-    <div className="w-full h-96" style={{ height:'620px'}}>
-      <div className="relative top-0 right-0 bottom-0 flex h-full">
-        <Image src={bannerImg} alt="test"/>
+    <div className="w-full h-100">
+      <div className="relative top-0 right-0 bottom-0 flex h-auto">
+        <Image src={bannerImg} alt="test" className="saturate-100"/>
       </div>
       <div 
       className="absolute top-0 right-0 bottom-0 w-full 
-      bg-gradient-to-b from-transparent to-gray-800 flex justify-between items-center">
+      bg-gradient-to-b from-secondary/40 to-gray-800 flex justify-between items-center">
         <div className="flex justify-between items-center container mx-auto">
         <div className="text-white">
          <h6 className="text-2xl mb-8">WELCOME TO WORDOFGOD CHURCH</h6>
