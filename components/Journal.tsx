@@ -48,7 +48,7 @@ const Journal = (props: Props) => {
           </TitleSection>
         </div>
 
-        <div className="grid md:grid-cols-3 2xl:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-3 2xl:grid-cols-4 gap-8">
           {initialJournals.map((item, key) => (
             <JournalCard
               key={key}
