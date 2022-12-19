@@ -1,18 +1,19 @@
-import React from "react";
+import Image from "next/image";
+import React, { PropsWithChildren } from "react";
+import plusIcon from "@/assets/icons/plus.svg"
 
-type Props= {
+type Props= PropsWithChildren<{
     title: string,
-    subTitle: string
-}
+}>
 
-const TitleSection:React.FC<Props> = ({ title, subTitle}) => {
+const TitleSection:React.FC<Props> = ({ title, children }) => {
   return (
     <>
-      <h6 className="text-orange-400/90 uppercase">{ subTitle }</h6>
-      <h2 className="font-bold text-3xl text-Stone-400 my-1 mb-4 flex flex-col">
-        {title}
-        <span>Living and</span> <span>SharingThe Gospel</span>
-      </h2>
+     <div className="relative flex flex-row my-4">
+      <h6 className="text-orange-400/90 uppercase">{ title }</h6>
+      <Image src={plusIcon} alt="plus-icon" className="absolute -top-8 bottom-10 left-12"/>
+     </div>
+      { children}
     </>
   );
 };
