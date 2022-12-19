@@ -7,9 +7,9 @@ interface Props {}
 
 export const Banner = (props: Props) => {
   return (
-    <div className="w-full h-100">
+    <div className="w-full h-auto">
       <div className="relative top-0 right-0 bottom-0 flex h-auto">
-        <Image src={bannerImg} alt="test" className="saturate-100"/>
+        <Image src={bannerImg} alt="test" className="saturate-100 h-screen"/>
       </div>
       <div 
       className="absolute top-0 right-0 bottom-0 w-full 
