@@ -6,8 +6,8 @@ type Props = IJournal;
 
 const JournalCard:React.FC<Props> = ({imageUrl,journalDate,createdBy,title,description}) => {
   return (
-    <div className="bg-white drop-shadow-xl">
-      <Image src={imageUrl} alt="test" className="cover" />
+    <div className="bg-white drop-shadow-xl rounded-md hover:transition duration-700 ease-in-out hover:scale-95">
+      <Image src={imageUrl} alt="test" className="cover rounded-t-md" />
       <div>
         <div className="flex justify-between py-3 mx-3 text-stone-400">
           <span>{journalDate}</span>
