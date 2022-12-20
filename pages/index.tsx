@@ -6,6 +6,7 @@ import { Navbar } from "@/layouts/Navbar";
 import About from "@/components/About";
 import Journal from "@/components/Journal";
 import Vision from "@/components/Vision";
+import Gallery from "@/components/Gallery";
 
 type Props = {
   imageUrl: ImageUrl;
@@ -23,6 +24,7 @@ export default function Home({ imageUrl, imageAlt, title, message }: Props) {
       <About/>
       <Journal/>
       <Vision/>
+      <Gallery/>
     </div>
   );
 }
