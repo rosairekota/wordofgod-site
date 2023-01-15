@@ -6,15 +6,12 @@ import b from "@/assets/images/galleries/b.png";
 import c from "@/assets/images/galleries/c.png";
 import d from "@/assets/images/galleries/4.png";
 import e from "@/assets/images/galleries/5.png";
-import f from "@/assets/images/galleries/6.png";
 import g from "@/assets/images/galleries/7.png";
 import h from "@/assets/images/galleries/8.png";
 import i from "@/assets/images/galleries/9.png";
 import j from "@/assets/images/galleries/7.png";
-import k from "@/assets/images/galleries/8.png";
-import l from "@/assets/images/galleries/9.png";
 
-import { IJournal,IGallery } from "types";
+import { IGallery } from "types";
 interface Props {}
 const initialGalleriesLeft: IGallery[] = [
   {
@@ -77,7 +74,7 @@ const Gallery = (props: Props) => {
   const [galleriesCenter, setGalleriesCenter] = useState<IGallery[]>(initialGalleriesCenter);
   const [galleriesCenterTo, setGalleriesCenterTo] = useState<IGallery[]>(initialGalleriesCenterTo);
   const [galleriesRight, setGalleriesRight] = useState<IGallery[]>(initialGalleriesRight);
-  
+ 
   return (
     <div className="h-auto w-full bg-orange-500/5">
       <div className="py-10">
