@@ -6,15 +6,12 @@ import b from "@/assets/images/galleries/b.png";
 import c from "@/assets/images/galleries/c.png";
 import d from "@/assets/images/galleries/4.png";
 import e from "@/assets/images/galleries/5.png";
-import f from "@/assets/images/galleries/6.png";
 import g from "@/assets/images/galleries/7.png";
 import h from "@/assets/images/galleries/8.png";
 import i from "@/assets/images/galleries/9.png";
 import j from "@/assets/images/galleries/7.png";
-import k from "@/assets/images/galleries/8.png";
-import l from "@/assets/images/galleries/9.png";
 
-import { IJournal,IGallery } from "types";
+import { IGallery } from "types";
 interface Props {}
 const initialGalleriesLeft: IGallery[] = [
   {
@@ -77,7 +74,7 @@ const Gallery = (props: Props) => {
   const [galleriesCenter, setGalleriesCenter] = useState<IGallery[]>(initialGalleriesCenter);
   const [galleriesCenterTo, setGalleriesCenterTo] = useState<IGallery[]>(initialGalleriesCenterTo);
   const [galleriesRight, setGalleriesRight] = useState<IGallery[]>(initialGalleriesRight);
-  
+ 
   return (
     <div className="h-auto w-full bg-orange-500/5">
       <div className="py-10">
@@ -91,29 +88,53 @@ const Gallery = (props: Props) => {
         <div className="grid grid-cols-4 gap-2">
         <div className="">
           {galleriesLeft.map((item, index) => (
-           <div key={index}>
-            <Image src={item.imageUrl} alt="img" className="w-full h-auto mb-3"/>
+           <div key={index} className="group relative">
+            <Image src={item.imageUrl} alt="img" className="w-full h-auto mb-3 transition duration-300 ease-out"/>
+            <div className="hidden absolute right-0 left-0 top-0 bottom-0 
+            bg-gradient-to-b from-secondary/40 to-gray-800 
+            group-hover:cursor-pointer group-hover:block group-hover:rounded-lg
+            group-hover:flex justify-center items-center font-bold transition duration-300 esa ">
+              <a href="" className="text-white">2019</a>
+            </div>
            </div>
           ))}
         </div>
-        <div className="">
+        <div className="group relative">
           {galleriesCenter.map((item, index) => (
-           <div key={index}>
-            <Image src={item.imageUrl} alt="img"  className="w-full h-auto mb-3"/>
+           <div key={index} className="group relative">
+            <Image src={item.imageUrl} alt="img"  className="w-full h-auto mb-3 transition duration-300 ease-out3"/>
+            <div className="hidden absolute right-0 left-0 top-0 bottom-0 
+            bg-gradient-to-b from-secondary/40 to-gray-800 
+            group-hover:cursor-pointer group-hover:block group-hover:rounded-lg
+            group-hover:flex justify-center items-center font-bold transition duration-300 esa ">
+              <a href="" className="text-white">2019</a>
+            </div>
            </div>
           ))}
         </div>
         <div>
           {galleriesCenterTo.map((item, index) => (
-           <div key={index}>
-            <Image src={item.imageUrl} alt="img"  className="w-full h-auto mb-3"/>
+           <div key={index} className="group relative">
+            <Image src={item.imageUrl} alt="img"  className="w-full h-auto mb-3 transition duration-300 ease-out3 "/>
+            <div className="hidden absolute right-0 left-0 top-0 bottom-0 
+            bg-gradient-to-b from-secondary/40 to-gray-800 
+            group-hover:cursor-pointer group-hover:block group-hover:rounded-lg
+            group-hover:flex justify-center items-center font-bold transition duration-300 esa ">
+              <a href="" className="text-white">2019</a>
+            </div>
            </div>
           ))}
         </div>
         <div>
           {galleriesRight.map((item, index) => (
-           <div key={index}>
-            <Image src={item.imageUrl} alt="img" className="w-full h-auto mb-3"/>
+           <div key={index} className="group relative">
+            <Image src={item.imageUrl} alt="img" className="w-full h-auto mb-3  transition duration-300 ease-out"/>
+            <div className="hidden absolute right-0 left-0 top-0 bottom-0 
+            bg-gradient-to-b from-secondary/40 to-gray-800 
+            group-hover:cursor-pointer group-hover:block group-hover:rounded-lg
+            group-hover:flex justify-center items-center font-bold transition duration-300 esa">
+              <a href="" className="text-white">2019</a>
+            </div>
            </div>
           ))}
         </div>

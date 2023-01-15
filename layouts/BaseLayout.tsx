@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { PropsWithChildren } from 'react'
 import { Navbar } from '@/layouts/Navbar'
+import { Footer } from './Footer'
 
 type BaseLayoutProps= PropsWithChildren<{
     
@@ -8,15 +9,17 @@ type BaseLayoutProps= PropsWithChildren<{
 
 const BaseLayout:React.FC<BaseLayoutProps> = ({children}) => {
     return (
-        <React.Fragment>
+        <>
             <Head>
                 <meta charSet='UTF-8'/>
                 <title>App</title>
             </Head>
             <main>
+            <Navbar/>
              {children}
+             <Footer/>
             </main>
-        </React.Fragment>
+        </>
     )
 }
 

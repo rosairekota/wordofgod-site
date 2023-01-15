@@ -22,7 +22,7 @@ export const Navbar:React.FC<Props> = (props) => {
     
     const [menus, setMenus] = useState<IMenu[]>(initialState)
     return (
-        <div className='w-full h-15 flex justify-between bg-amber-600 py-5 z-5'>
+        <div className='w-full h-15 flex justify-between z-5'>
            <div className="container mx-auto bg-amber-600 border border-1">
            <div className='bg-amber-600'>
             <a href="">Logo</a>
